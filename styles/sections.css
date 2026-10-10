@@ -1,0 +1,1246 @@
+/* ==========================================================================
+   SkillPro AI - Specific Page Sections Styling & Responsive Rules
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   A & B. HERO SECTION
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding-top: calc(var(--navbar-height) + 3.5rem);
+  padding-bottom: 5.5rem;
+  background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 10% 70%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
+              var(--color-gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-dark-800);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.hero-badge-live .pulse-dot {
+  width: 9px;
+  height: 9px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(6, 182, 212, 0.5);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 1.35rem;
+  color: var(--color-dark-900);
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-dark-600);
+  margin-bottom: 2.2rem;
+  max-width: 580px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats-mini {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-gray-300);
+}
+
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat-item strong {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-dark-900);
+  line-height: 1.1;
+}
+
+.hero-stat-item span {
+  font-size: 0.825rem;
+  color: var(--color-gray-500);
+}
+
+/* Hero Visual Composition */
+.hero-visual {
+  position: relative;
+}
+
+.hero-card-mockup {
+  background: var(--color-dark-900);
+  border-radius: var(--radius-xl);
+  padding: 1.85rem;
+  color: var(--color-white);
+  box-shadow: 0 25px 50px -12px rgba(10, 15, 29, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+.mockup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.25rem;
+}
+
+.mockup-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.mockup-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mockup-dots span:nth-child(1) { background: #ef4444; }
+.mockup-dots span:nth-child(2) { background: #f59e0b; }
+.mockup-dots span:nth-child(3) { background: #10b981; }
+
+.mockup-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mockup-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-ai);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.mockup-user-info h4 {
+  font-size: 1.05rem;
+  color: var(--color-white);
+  margin-bottom: 0.2rem;
+}
+
+.mockup-user-info p {
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+}
+
+/* Skill bars inside mockup */
+.mockup-skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.mockup-skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mockup-skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  font-weight: 500;
+}
+
+.mockup-skill-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.mockup-skill-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+}
+
+.mockup-skill-fill.fill-ai {
+  background: var(--gradient-ai);
+}
+
+.mockup-skill-fill.fill-soft {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+}
+
+.mockup-insight-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.mockup-insight-icon {
+  color: var(--color-accent-ai);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mockup-insight-text {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1.25rem;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 3;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-badge-top {
+  top: -20px;
+  right: -20px;
+  animation-delay: 0s;
+}
+
+.floating-badge-bottom {
+  bottom: -25px;
+  left: -25px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.floating-icon.icon-cyan {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary-hover);
+}
+
+.floating-icon.icon-violet {
+  background: var(--color-accent-ai-light);
+  color: var(--color-accent-ai);
+}
+
+.floating-text strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-dark-900);
+}
+
+.floating-text span {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+}
+
+/* --------------------------------------------------------------------------
+   C. ¿QUÉ ES SKILLPRO AI? (ABOUT & BENEFITS)
+   -------------------------------------------------------------------------- */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.benefit-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 1.85rem;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.benefit-card:nth-child(2) .benefit-icon {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.benefit-card:nth-child(3) .benefit-icon {
+  background: var(--color-accent-ai-light);
+  color: var(--color-accent-ai);
+}
+
+.benefit-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+  color: var(--color-dark-900);
+}
+
+.benefit-card p {
+  font-size: 0.925rem;
+  color: var(--color-dark-600);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   D. TIPOS DE HABILIDADES (SKILLS SECTION)
+   -------------------------------------------------------------------------- */
+.skills-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.skill-cat-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--color-gray-300);
+  padding: 2.25rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-cat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-gray-300);
+  transition: background var(--transition-normal);
+}
+
+.skill-cat-card.cat-hard::before { background: var(--color-primary); }
+.skill-cat-card.cat-soft::before { background: var(--color-success); }
+.skill-cat-card.cat-trans::before { background: var(--color-warning); }
+.skill-cat-card.cat-ai::before { background: var(--color-accent-ai); }
+
+.skill-cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.skill-cat-card.cat-hard:hover { border-color: rgba(2, 132, 199, 0.4); }
+.skill-cat-card.cat-soft:hover { border-color: rgba(16, 185, 129, 0.4); }
+.skill-cat-card.cat-trans:hover { border-color: rgba(245, 158, 11, 0.4); }
+.skill-cat-card.cat-ai:hover { border-color: rgba(139, 92, 246, 0.4); }
+
+.skill-cat-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.skill-cat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.cat-hard .skill-cat-icon { background: var(--color-primary-light); color: var(--color-primary); }
+.cat-soft .skill-cat-icon { background: rgba(16, 185, 129, 0.12); color: var(--color-success); }
+.cat-trans .skill-cat-icon { background: rgba(245, 158, 11, 0.12); color: var(--color-warning); }
+.cat-ai .skill-cat-icon { background: var(--color-accent-ai-light); color: var(--color-accent-ai); }
+
+.skill-cat-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.skill-cat-desc {
+  font-size: 0.95rem;
+  color: var(--color-dark-600);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skill-examples-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-500);
+  margin-bottom: 0.75rem;
+}
+
+.skill-examples-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   E. FUNCIONALIDADES PRINCIPALES (FEATURES)
+   -------------------------------------------------------------------------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.35rem;
+  background: var(--color-gray-200);
+  color: var(--color-dark-800);
+  transition: all var(--transition-normal);
+}
+
+.feature-card:hover .feature-icon-wrapper {
+  background: var(--gradient-brand);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-dark-900);
+}
+
+.feature-desc {
+  font-size: 0.925rem;
+  color: var(--color-dark-600);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   F. CÓMO FUNCIONA (HOW IT WORKS) - 5 PASOS
+   -------------------------------------------------------------------------- */
+.steps-container {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.step-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.step-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-dark-900);
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--color-dark-600);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   G. DEMOSTRACIÓN INTERACTIVA (DEMO SECTION)
+   -------------------------------------------------------------------------- */
+.demo-wrapper {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-gray-300);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+}
+
+.demo-disclaimer {
+  background: linear-gradient(90deg, #ecfeff 0%, #f5f3ff 100%);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+  padding: 0.95rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.875rem;
+  color: var(--color-dark-700);
+}
+
+.demo-disclaimer-icon {
+  color: var(--color-accent-ai);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+}
+
+/* Demo Result Panel */
+.demo-result-area {
+  display: none;
+  animation: fadeIn 0.45s ease-out forwards;
+  border-top: 2px dashed var(--color-gray-300);
+  padding-top: 2.5rem;
+  margin-top: 1rem;
+}
+
+.demo-result-area.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-card-banner {
+  background: var(--color-dark-900);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-card-banner::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.result-user-meta h3 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.result-user-meta p {
+  color: var(--color-gray-400);
+  font-size: 0.95rem;
+}
+
+.result-badges-row {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+/* Results Content Blocks */
+.result-block {
+  margin-bottom: 2.25rem;
+}
+
+.result-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.25rem;
+  color: var(--color-dark-900);
+  margin-bottom: 1.15rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid var(--color-gray-200);
+}
+
+.result-block-title svg {
+  color: var(--color-primary);
+}
+
+.objective-box {
+  background: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  color: var(--color-dark-800);
+  line-height: 1.65;
+}
+
+/* Strengths vs Gaps comparison grid */
+.strengths-gaps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.analysis-column {
+  background: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-gray-300);
+}
+
+.analysis-column.col-strengths {
+  border-top: 3px solid var(--color-success);
+}
+
+.analysis-column.col-gaps {
+  border-top: 3px solid var(--color-warning);
+}
+
+.analysis-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.analysis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.analysis-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--color-dark-700);
+  line-height: 1.5;
+}
+
+.analysis-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Weekly Plan Accordion/Timeline */
+.weekly-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.week-card {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.week-card:hover {
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.week-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.week-tag {
+  font-weight: 700;
+  font-size: 0.825rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.week-card h5 {
+  font-size: 0.95rem;
+  color: var(--color-dark-900);
+  margin-bottom: 0.5rem;
+}
+
+.week-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.week-task-item {
+  font-size: 0.825rem;
+  color: var(--color-dark-600);
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.45;
+}
+
+.week-task-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* KPIs grid */
+.kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.kpi-card {
+  background: var(--color-gray-100);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kpi-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary-light);
+  color: var(--color-secondary-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.kpi-info strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-dark-900);
+}
+
+.kpi-info span {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+}
+
+.demo-action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-gray-300);
+}
+
+/* --------------------------------------------------------------------------
+   H. CASO DE USO PRÁCTICO (PRACTICAL EXAMPLE)
+   -------------------------------------------------------------------------- */
+.example-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--color-gray-300);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.example-header {
+  background: var(--gradient-dark);
+  color: var(--color-white);
+  padding: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.example-header h3 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.example-header p {
+  color: var(--color-gray-300);
+  font-size: 0.95rem;
+}
+
+.example-body {
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+}
+
+.example-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.example-skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.example-action-plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.example-plan-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+}
+
+.step-check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-secondary-light);
+  color: var(--color-secondary-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.example-plan-step p {
+  font-size: 0.9rem;
+  color: var(--color-dark-700);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   I. BENEFICIOS Y PROPUESTA DE VALOR (BENEFITS)
+   -------------------------------------------------------------------------- */
+.benefits-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.benefit-value-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  transition: all var(--transition-normal);
+}
+
+.benefit-value-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-value-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-dark-900);
+}
+
+.benefit-value-card p {
+  font-size: 0.9rem;
+  color: var(--color-dark-600);
+  line-height: 1.6;
+}
+
+.honest-disclaimer-box {
+  background: rgba(2, 132, 199, 0.06);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.honest-disclaimer-box svg {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.honest-disclaimer-box p {
+  margin: 0;
+  font-size: 0.925rem;
+  color: var(--color-dark-700);
+}
+
+/* --------------------------------------------------------------------------
+   J. PREGUNTAS FRECUENTES (FAQ)
+   -------------------------------------------------------------------------- */
+.faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   K. FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+  background: var(--color-dark-900);
+  color: var(--color-gray-400);
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-brand h4 {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-brand p {
+  color: var(--color-gray-400);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.footer-slogan {
+  font-style: italic;
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+}
+
+.footer-col h5 {
+  color: var(--color-white);
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-link {
+  color: var(--color-gray-400);
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-secondary);
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.footer-academic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-full);
+  color: #cbd5e1;
+  font-size: 0.775rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN (BREAKPOINTS)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta-group {
+    justify-content: center;
+  }
+  .hero-stats-mini {
+    justify-content: center;
+  }
+  .hero-visual {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .weekly-plan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .example-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    padding: 1.75rem;
+    box-shadow: var(--shadow-xl);
+    border-bottom: 1px solid var(--color-gray-300);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-normal);
+  }
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .skills-category-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefits-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .strengths-gaps-grid {
+    grid-template-columns: 1fr;
+  }
+  .weekly-plan-grid {
+    grid-template-columns: 1fr;
+  }
+  .kpis-grid {
+    grid-template-columns: 1fr;
+  }
+  .radio-chips {
+    grid-template-columns: 1fr;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .floating-badge {
+    display: none; /* Hide floating badges on smaller screens to prevent overlap */
+  }
+}

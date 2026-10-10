@@ -1,0 +1,25 @@
+{
+  "name": "skillpro-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SkillPro AI - Plataforma de diagnóstico, desarrollo de habilidades y planes de aprendizaje personalizados",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "keywords": [
+    "education",
+    "skills",
+    "ai-assistant",
+    "learning-path",
+    "career-development",
+    "engineering"
+  ],
+  "author": "Ingeniería Informática",
+  "license": "MIT"
+}

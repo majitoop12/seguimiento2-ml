@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillPro AI — Desarrolla las habilidades que impulsan tu futuro profesional</title>
+  <meta name="description" content="Asistente con inteligencia artificial para estudiantes y profesionales: diagnostica competencias, reconoce fortalezas, detecta áreas de mejora y genera planes de aprendizaje personalizados.">
+  <meta name="keywords" content="SkillPro AI, habilidades profesionales, hard skills, soft skills, ingeniería informática, plan de aprendizaje, portafolio">
+  <meta name="author" content="Facultad de Ingeniería Informática">
+
+  <!-- Google Fonts: Outfit (Titulares) & Inter (Lectura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hojas de Estilos Modulares -->
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="stylesheet" href="./styles/sections.css">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306b6d4'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- =========================================================================
+       A. BARRA DE NAVEGACIÓN
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="SkillPro AI Inicio">
+        <div class="nav-logo-icon">
+          <!-- Icono SVG de Nodo / Cerebro Tecnológico -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">SkillPro<span>AI</span></span>
+      </a>
+
+      <!-- Menú de Navegación -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+        <a href="#hero" class="nav-link active">Inicio</a>
+        <a href="#features" class="nav-link">Funcionalidades</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#how-it-works" class="nav-link">Cómo funciona</a>
+        <a href="#example" class="nav-link">Caso Práctico</a>
+        <a href="#demo" class="nav-link">Probar herramienta</a>
+      </nav>
+
+      <!-- Botón de Acción Principal y Menú Mobile -->
+      <div class="nav-actions">
+        <a href="#demo" class="btn btn-primary btn-sm">
+          <span>Probar herramienta</span>
+          <span class="btn-icon-right">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       B. SECCIÓN HERO (PRINCIPAL)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Columna Izquierda: Mensaje Central & CTAs -->
+      <div class="hero-content">
+        <div class="hero-badge-live">
+          <span class="pulse-dot"></span>
+          <span>Plataforma de Orientación y Crecimiento Profesional</span>
+        </div>
+
+        <h1 class="hero-title">
+          Desarrolla las <span class="text-gradient">habilidades</span> que impulsan tu futuro profesional
+        </h1>
+
+        <p class="hero-subtitle">
+          Identifica tus fortalezas, descubre qué puedes mejorar y transforma tus objetivos profesionales en un plan de acción personalizado con <strong>SkillPro AI</strong>.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#demo" class="btn btn-primary btn-lg">
+            <span>Probar SkillPro AI</span>
+            <span class="btn-icon-right">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </span>
+          </a>
+          <a href="#features" class="btn btn-secondary btn-lg">
+            <span>Explorar funcionalidades</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-mini">
+          <div class="hero-stat-item">
+            <strong>4 Categorías</strong>
+            <span>Técnicas, blandas, transferibles e IA</span>
+          </div>
+          <div class="hero-stat-item">
+            <strong>100% Personalizado</strong>
+            <span>Adaptado a tu tiempo y metas</span>
+          </div>
+          <div class="hero-stat-item">
+            <strong>Enfoque Práctico</strong>
+            <span>Orientado a proyectos y portafolio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Composición Visual Interactiva (Mockup Dashboard) -->
+      <div class="hero-visual">
+        <!-- Floating Badge Superior -->
+        <div class="floating-badge floating-badge-top">
+          <div class="floating-icon icon-violet">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="floating-text">
+            <strong>IA Diagnóstico Activo</strong>
+            <span>94% Compatibilidad con el mercado</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Central Mockup -->
+        <div class="hero-card-mockup">
+          <div class="mockup-header">
+            <div class="mockup-status">
+              <span class="pulse-dot"></span>
+              <span>Análisis de Competencias 2026</span>
+            </div>
+            <div class="mockup-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="mockup-profile-row">
+            <div class="mockup-avatar">IT</div>
+            <div class="mockup-user-info">
+              <h4>Perfil: Estudiante de Ingeniería Informática</h4>
+              <p>Meta: Desarrollador de Software Junior</p>
+            </div>
+          </div>
+
+          <div class="mockup-skill-list">
+            <!-- Barra 1: Hard Skills -->
+            <div class="mockup-skill-item">
+              <div class="mockup-skill-info">
+                <span>Hard Skills: Python, SQL & Git</span>
+                <strong style="color: var(--color-secondary);">78%</strong>
+              </div>
+              <div class="mockup-skill-bar">
+                <div class="mockup-skill-fill" style="width: 78%;"></div>
+              </div>
+            </div>
+
+            <!-- Barra 2: Soft Skills -->
+            <div class="mockup-skill-item">
+              <div class="mockup-skill-info">
+                <span>Soft Skills: Comunicación & Trabajo en Equipo</span>
+                <strong style="color: var(--color-success);">85%</strong>
+              </div>
+              <div class="mockup-skill-bar">
+                <div class="mockup-skill-fill fill-soft" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <!-- Barra 3: Habilidades de IA -->
+            <div class="mockup-skill-item">
+              <div class="mockup-skill-info">
+                <span>Digital & IA: Prompting & Automatización</span>
+                <strong style="color: var(--color-accent-ai);">70%</strong>
+              </div>
+              <div class="mockup-skill-bar">
+                <div class="mockup-skill-fill fill-ai" style="width: 70%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mockup-insight-box">
+            <div class="mockup-insight-icon">💡</div>
+            <div class="mockup-insight-text">
+              <strong>Recomendación IA:</strong> Prioriza la construcción de un proyecto demostrable con control de versiones en GitHub para reducir la brecha técnica en un 35%.
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Badge Inferior -->
+        <div class="floating-badge floating-badge-bottom">
+          <div class="floating-icon icon-cyan">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="floating-text">
+            <strong>Plan de 4 Semanas</strong>
+            <span>Objetivos SMART y medibles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       C. ¿QUÉ ES SKILLPRO AI?
+       ========================================================================= -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-ai">Concepto & Enfoque</span>
+        <h2 class="section-title">¿Qué es <span class="text-gradient">SkillPro AI</span>?</h2>
+        <p class="section-subtitle">
+          SkillPro AI es un asistente inteligente basado en inteligencia artificial diseñado para orientar a estudiantes y profesionales en el reconocimiento, desarrollo y aplicación efectiva de sus competencias en el dinámico mercado tecnológico actual.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Beneficio 1 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h4>Autoconocimiento profesional</h4>
+          <p>Comprende tu estado actual, identifica en qué punto de tu trayectoria académica o laboral te encuentras y define con claridad hacia dónde avanzar.</p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h4>Identificación de fortalezas</h4>
+          <p>Descubre las habilidades en las que ya destacas y aprende a articularlas de forma convincente en entrevistas y perfiles profesionales.</p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h4>Detección de habilidades por mejorar</h4>
+          <p>Detecta con precisión las brechas de conocimiento que te separan del puesto que deseas, evitando la frustración de aprender sin rumbo.</p>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h4>Aprendizaje continuo</h4>
+          <p>Estructura una rutina formativa constante con metodologías ágiles de micro-aprendizaje aplicadas a proyectos prácticos.</p>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Planificación de objetivos</h4>
+          <p>Transforma metas difusas en objetivos específicos, medibles, alcanzables, relevantes y con plazos realistas (Metodología SMART).</p>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4>Seguimiento del progreso</h4>
+          <p>Monitorea tu evolución mediante indicadores tangibles como commits, repositorios creados y ejercicios resueltos semanalmente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       D. TIPOS DE HABILIDADES
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Taxonomía Integral</span>
+        <h2 class="section-title">Tipos de <span class="text-gradient">Habilidades Profesionales</span></h2>
+        <p class="section-subtitle">
+          El mercado laboral contemporáneo exige un balance integral. SkillPro AI estructura tu diagnóstico en cuatro dimensiones fundamentales.
+        </p>
+      </div>
+
+      <div class="skills-category-grid">
+        <!-- 1. Hard Skills -->
+        <div class="skill-cat-card cat-hard">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">💻</div>
+            <span class="badge badge-tech">Técnicas</span>
+          </div>
+          <h3 class="skill-cat-title">1. Hard Skills — Habilidades técnicas</h3>
+          <p class="skill-cat-desc">
+            Conocimientos específicos y especializados adquiridos mediante el estudio estructurado y la práctica reiterada. Constituyen el núcleo de ejecución de la ingeniería.
+          </p>
+          <div class="skill-examples-title">Ejemplos concretos:</div>
+          <div class="skill-examples-tags">
+            <span class="tag-pill">Programación (Python, JS)</span>
+            <span class="tag-pill">Bases de Datos (SQL, NoSQL)</span>
+            <span class="tag-pill">Análisis de Datos</span>
+            <span class="tag-pill">Arquitectura de Software</span>
+            <span class="tag-pill">Control de Versiones (Git)</span>
+            <span class="tag-pill">APIs & Backend</span>
+          </div>
+        </div>
+
+        <!-- 2. Soft Skills -->
+        <div class="skill-cat-card cat-soft">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🤝</div>
+            <span class="badge badge-soft">Interpersonales</span>
+          </div>
+          <h3 class="skill-cat-title">2. Soft Skills — Habilidades blandas</h3>
+          <p class="skill-cat-desc">
+            Competencias interpersonales y actitudinales indispensables para colaborar eficazmente, generar confianza y prosperar dentro de equipos multidisciplinarios.
+          </p>
+          <div class="skill-examples-title">Ejemplos concretos:</div>
+          <div class="skill-examples-tags">
+            <span class="tag-pill">Comunicación Asertiva</span>
+            <span class="tag-pill">Liderazgo & Iniciativa</span>
+            <span class="tag-pill">Pensamiento Crítico</span>
+            <span class="tag-pill">Adaptabilidad al Cambio</span>
+            <span class="tag-pill">Trabajo en Equipo</span>
+            <span class="tag-pill">Empatía Profesional</span>
+          </div>
+        </div>
+
+        <!-- 3. Habilidades Transferibles -->
+        <div class="skill-cat-card cat-trans">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🔄</div>
+            <span class="badge badge-transfer">Transversales</span>
+          </div>
+          <h3 class="skill-cat-title">3. Habilidades transferibles</h3>
+          <p class="skill-cat-desc">
+            Capacidades versátiles que no dependen de una herramienta única y mantienen su vigencia y valor en distintos cargos, proyectos y sectores de la industria.
+          </p>
+          <div class="skill-examples-title">Ejemplos concretos:</div>
+          <div class="skill-examples-tags">
+            <span class="tag-pill">Resolución de Problemas</span>
+            <span class="tag-pill">Gestión del Tiempo</span>
+            <span class="tag-pill">Planificación Estratégica</span>
+            <span class="tag-pill">Capacidad de Organización</span>
+            <span class="tag-pill">Toma de Decisiones</span>
+            <span class="tag-pill">Priorización Ágil</span>
+          </div>
+        </div>
+
+        <!-- 4. Habilidades Digitales y de IA -->
+        <div class="skill-cat-card cat-ai">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🤖</div>
+            <span class="badge badge-ai">Futuro & IA</span>
+          </div>
+          <h3 class="skill-cat-title">4. Habilidades digitales y de IA</h3>
+          <p class="skill-cat-desc">
+            Capacidades de vanguardia para potenciar la productividad mediante automatizaciones, análisis asistido y el aprovechamiento ético de modelos de lenguaje e inteligencia artificial.
+          </p>
+          <div class="skill-examples-title">Ejemplos concretos:</div>
+          <div class="skill-examples-tags">
+            <span class="tag-pill">Prompt Engineering</span>
+            <span class="tag-pill">Automatización de Flujos</span>
+            <span class="tag-pill">Análisis con LLMs</span>
+            <span class="tag-pill">Uso Ético y Responsable de IA</span>
+            <span class="tag-pill">Herramientas Colaborativas</span>
+            <span class="tag-pill">Evaluación de Sesgos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       E. FUNCIONALIDADES PRINCIPALES
+       ========================================================================= -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-ai">Capacidades del Sistema</span>
+        <h2 class="section-title">Funcionalidades <span class="text-gradient">Diseñadas para tu Éxito</span></h2>
+        <p class="section-subtitle">
+          Herramientas concebidas para transformar la incertidumbre vocacional en un camino formativo claro, metódico y medible.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- 1. Diagnóstico de habilidades -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="feature-title">Diagnóstico de habilidades</h3>
+          <p class="feature-desc">Identifica las competencias actuales del usuario mediante un cuestionario estructurado que analiza su nivel formativo y experiencia previa.</p>
+        </div>
+
+        <!-- 2. Análisis de fortalezas -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="feature-title">Análisis de fortalezas</h3>
+          <p class="feature-desc">Reconoce capacidades destacadas y compara tu perfil frente a requerimientos reales, evidenciando oportunidades clave de mejora.</p>
+        </div>
+
+        <!-- 3. Plan de aprendizaje -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="feature-title">Plan de aprendizaje</h3>
+          <p class="feature-desc">Propone actividades aplicadas, ejercicios incrementales y proyectos funcionales adaptados al tiempo que dispones cada semana.</p>
+        </div>
+
+        <!-- 4. Orientación profesional -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <h3 class="feature-title">Orientación profesional</h3>
+          <p class="feature-desc">Ayuda a aplicar los conocimientos teóricos adquiridos en la universidad directamente a problemas del entorno laboral real.</p>
+        </div>
+
+        <!-- 5. Objetivos medibles -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3 class="feature-title">Objetivos medibles</h3>
+          <p class="feature-desc">Establece metas realistas con plazos precisos, criterios de aceptación y entregables verificables en cada fase del aprendizaje.</p>
+        </div>
+
+        <!-- 6. Seguimiento del progreso -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="feature-title">Seguimiento del progreso</h3>
+          <p class="feature-desc">Permite revisar avances, registrar hitos superados y ajustar el cronograma de estudio dinámicamente cuando lo necesites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       F. ¿CÓMO FUNCIONA? (5 PASOS)
+       ========================================================================= -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Metodología Paso a Paso</span>
+        <h2 class="section-title">¿Cómo funciona <span class="text-gradient">SkillPro AI</span>?</h2>
+        <p class="section-subtitle">
+          Un flujo metódico de 5 etapas para transitar de un objetivo general a un plan de acción altamente estructurado.
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="steps-grid">
+          <!-- Paso 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Define tu objetivo</h3>
+            <p class="step-desc">Especifica el rol o meta profesional que deseas conquistar (ej. Desarrollador Junior).</p>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Describe tu estado</h3>
+            <p class="step-desc">Indica tu experiencia actual, nivel formativo y las competencias que dominas.</p>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Detecta brechas</h3>
+            <p class="step-desc">El sistema analiza la distancia formativa entre tu estado y las demandas del rol.</p>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Sigue tu plan</h3>
+            <p class="step-desc">Ejecuta un cronograma semanal con proyectos de código, ejercicios y entregables.</p>
+          </div>
+
+          <!-- Paso 5 -->
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h3 class="step-title">Evalúa tus avances</h3>
+            <p class="step-desc">Monitorea tus KPIs, mide el impacto en tu portafolio y calibra nuevos retos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       G. DEMOSTRACIÓN INTERACTIVA DE SKILLPRO AI
+       ========================================================================= -->
+  <section class="section section-alt" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-ai">Demostración Funcional</span>
+        <h2 class="section-title">Prueba la Experiencia de <span class="text-gradient-ai">SkillPro AI</span></h2>
+        <p class="section-subtitle">
+          Completa tus datos profesionales y genera un plan de aprendizaje simulado en tiempo real sin salir del navegador.
+        </p>
+      </div>
+
+      <div class="demo-wrapper">
+        <!-- Aviso de transparencia local -->
+        <div class="demo-disclaimer">
+          <span class="demo-disclaimer-icon">💡</span>
+          <div>
+            <strong>Demostración de cliente local:</strong> Esta herramienta interactiva procesa y genera el diagnóstico en tu navegador web. No consume cuotas de API externas y representa de manera funcional el comportamiento documentado en <a href="#skill-doc" style="text-decoration: underline; font-weight: 600;">SKILL.md</a>.
+          </div>
+        </div>
+
+        <div class="demo-grid">
+          <!-- Formulario Interactivo -->
+          <form id="skillpro-demo-form" novalidate>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+              <!-- Campo 1: Nombre o Perfil -->
+              <div class="form-group">
+                <label for="demo-profile-name" class="form-label">
+                  Nombre o Perfil Profesional <span class="req">*</span>
+                </label>
+                <input type="text" 
+                       id="demo-profile-name" 
+                       class="form-control" 
+                       placeholder="Ej. Estudiante de Ingeniería Informática" 
+                       value="Estudiante de Ingeniería Informática"
+                       required>
+                <div class="form-hint">Tu nombre o tu condición académica actual.</div>
+                <div class="form-error-msg">Por favor ingresa un nombre o perfil profesional.</div>
+              </div>
+
+              <!-- Campo 2: Objetivo Profesional -->
+              <div class="form-group">
+                <label for="demo-target-role" class="form-label">
+                  Objetivo Profesional Deseado <span class="req">*</span>
+                </label>
+                <input type="text" 
+                       id="demo-target-role" 
+                       class="form-control" 
+                       placeholder="Ej. Desarrollador de Software Junior" 
+                       value="Desarrollador de Software Junior"
+                       required>
+                <div class="form-hint">El puesto, tecnología o meta que buscas alcanzar.</div>
+                <div class="form-error-msg">Por favor define un objetivo profesional.</div>
+              </div>
+            </div>
+
+            <!-- Campo 3: Nivel de Experiencia -->
+            <div class="form-group">
+              <label class="form-label">Nivel de Experiencia Actual <span class="req">*</span></label>
+              <div class="radio-chips">
+                <div class="radio-chip-item">
+                  <input type="radio" name="demo-experience" id="exp-principiante" value="principiante" checked>
+                  <label for="exp-principiante" class="radio-chip-label">
+                    <span>🌱 Principiante</span>
+                    <span class="sub">Primeros ciclos / conceptos base</span>
+                  </label>
+                </div>
+                <div class="radio-chip-item">
+                  <input type="radio" name="demo-experience" id="exp-intermedio" value="intermedio">
+                  <label for="exp-intermedio" class="radio-chip-label">
+                    <span>⚡ Intermedio</span>
+                    <span class="sub">Proyectos académicos previos</span>
+                  </label>
+                </div>
+                <div class="radio-chip-item">
+                  <input type="radio" name="demo-experience" id="exp-avanzado" value="avanzado">
+                  <label for="exp-avanzado" class="radio-chip-label">
+                    <span>🚀 Avanzado</span>
+                    <span class="sub">Consolidación y especialización</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Campo 4: Habilidades que desea desarrollar -->
+            <div class="form-group">
+              <label class="form-label">
+                Habilidades que deseas desarrollar o reforzar <span class="req">*</span>
+              </label>
+              <p class="form-hint" style="margin-bottom: 0.5rem;">
+                Haz clic para activar o desactivar habilidades sugeridas por el catálogo de SkillPro AI:
+              </p>
+              <div class="skills-selector-grid" id="skills-selector-container">
+                <!-- Se poblará dinámicamente con JavaScript -->
+              </div>
+              <div id="skills-error-msg" class="form-error-msg" style="display: none; margin-top: 0.5rem;">
+                Selecciona al menos una habilidad para construir tu diagnóstico.
+              </div>
+
+              <!-- Añadir habilidad personalizada -->
+              <div class="add-custom-skill-wrap">
+                <input type="text" id="custom-skill-input" class="form-control" placeholder="¿Quieres añadir otra habilidad? (ej. React, Ciberseguridad...)">
+                <button type="button" id="add-custom-skill-btn" class="btn btn-secondary btn-sm">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+
+            <!-- Campo 5: Tiempo disponible por semana -->
+            <div class="form-group" style="max-width: 480px;">
+              <label for="demo-weekly-time" class="form-label">
+                Tiempo disponible para aprender por semana <span class="req">*</span>
+              </label>
+              <select id="demo-weekly-time" class="form-control">
+                <option value="3 a 5 horas/semana">3 a 5 horas/semana (Ritmo formativo constante)</option>
+                <option value="6 a 10 horas/semana" selected>6 a 10 horas/semana (Recomendado para estudiantes)</option>
+                <option value="12 a 15+ horas/semana">12 a 15+ horas/semana (Inmersión intensiva)</option>
+              </select>
+            </div>
+
+            <!-- Botón de Generación -->
+            <div style="margin-top: 2rem;">
+              <button type="submit" id="demo-submit-btn" class="btn btn-primary btn-lg" style="width: 100%;">
+                <span>✨ Generar mi plan personalizado</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Panel de Resultados Dinámicos (Inyectado por JavaScript) -->
+          <div id="demo-result-area" class="demo-result-area" aria-live="polite">
+            <!-- Contenido renderizado por renderResultPlan() en main.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       H. EJEMPLO PRÁCTICO (CASO DE USO UNIVERSITARIO)
+       ========================================================================= -->
+  <section class="section" id="example">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Caso de Estudio Real</span>
+        <h2 class="section-title">Ejemplo Práctico: <span class="text-gradient">Ingeniería Informática</span></h2>
+        <p class="section-subtitle">
+          Descubre cómo un estudiante universitario de nuestra carrera estructura su ruta formativa hacia su primera oportunidad profesional.
+        </p>
+      </div>
+
+      <div class="example-card">
+        <div class="example-header">
+          <div>
+            <h3>Caso de Estudio: Primer Empleo como Desarrollador de Software</h3>
+            <p><strong>Perfil:</strong> Estudiante de Ingeniería Informática buscando inserción laboral inicial.</p>
+          </div>
+          <button type="button" class="btn btn-outline-white" id="btn-load-example-case">
+            ⚡ Cargar este caso en la Demo
+          </button>
+        </div>
+
+        <div class="example-body">
+          <!-- Columna 1: Competencias -->
+          <div>
+            <h4 style="font-size: 1.15rem; color: var(--color-dark-900); margin-bottom: 0.5rem;">
+              🎯 Habilidades Prioritarias por Desarrollar
+            </h4>
+            <p style="font-size: 0.875rem; color: var(--color-dark-600);">
+              Competencias seleccionadas para maximizar el impacto en procesos de selección técnicos:
+            </p>
+            <div class="example-skills-list">
+              <div class="example-skill-row">
+                <span>💻 Programación estructurada y moderna</span>
+                <span class="badge badge-tech">Técnica</span>
+              </div>
+              <div class="example-skill-row">
+                <span>🗄️ Bases de datos (Modelado y consultas SQL)</span>
+                <span class="badge badge-tech">Técnica</span>
+              </div>
+              <div class="example-skill-row">
+                <span>🐙 Control de versiones con Git y GitHub</span>
+                <span class="badge badge-tech">Técnica</span>
+              </div>
+              <div class="example-skill-row">
+                <span>🧩 Resolución de problemas y algoritmia</span>
+                <span class="badge badge-transfer">Transferible</span>
+              </div>
+              <div class="example-skill-row">
+                <span>🗣️ Comunicación técnica y trabajo en equipo</span>
+                <span class="badge badge-soft">Blanda</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna 2: Plan de Acción -->
+          <div>
+            <h4 style="font-size: 1.15rem; color: var(--color-dark-900); margin-bottom: 0.5rem;">
+              📋 Plan de Acción Recomendado por SkillPro AI
+            </h4>
+            <p style="font-size: 0.875rem; color: var(--color-dark-600);">
+              Fases de trabajo aplicadas para culminar con un portafolio profesional en GitHub:
+            </p>
+            <div class="example-action-plan-list">
+              <div class="example-plan-step">
+                <div class="step-check-icon">1</div>
+                <div>
+                  <strong>Practicar programación mediante ejercicios sistemáticos:</strong>
+                  <p>Consolidar la sintaxis y patrones resolviendo problemas de lógica y algoritmos.</p>
+                </div>
+              </div>
+              <div class="example-plan-step">
+                <div class="step-check-icon">2</div>
+                <div>
+                  <strong>Crear un proyecto funcional para el portafolio:</strong>
+                  <p>Construir una aplicación completa que resuelva una necesidad real con backend y persistencia.</p>
+                </div>
+              </div>
+              <div class="example-plan-step">
+                <div class="step-check-icon">3</div>
+                <div>
+                  <strong>Aprender a documentar el código profesionalmente:</strong>
+                  <p>Redactar especificaciones claras, comentarios limpios y un README.md instructivo.</p>
+                </div>
+              </div>
+              <div class="example-plan-step">
+                <div class="step-check-icon">4</div>
+                <div>
+                  <strong>Publicar el proyecto en GitHub:</strong>
+                  <p>Estructurar un repositorio público con control de ramas, etiquetas y despliegue público.</p>
+                </div>
+              </div>
+              <div class="example-plan-step">
+                <div class="step-check-icon">5</div>
+                <div>
+                  <strong>Evaluar semanalmente los avances:</strong>
+                  <p>Revisar las métricas de progreso y calibrar el esfuerzo para el siguiente sprint formativo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       I. SECCIÓN DE BENEFICIOS Y PROPUESTA DE VALOR
+       ========================================================================= -->
+  <section class="section section-alt" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-ai">Crecimiento Sostenible</span>
+        <h2 class="section-title">Beneficios Clave de <span class="text-gradient">SkillPro AI</span></h2>
+        <p class="section-subtitle">
+          Un enfoque realista orientado al desarrollo de competencias verificables que elevan tu perfil profesional.
+        </p>
+      </div>
+
+      <div class="benefits-cards-grid">
+        <div class="benefit-value-card">
+          <h4>Aprender de forma continua</h4>
+          <p>Adquiere el hábito del aprendizaje permanente mediante rutas graduales que evitan la sobrecarga de información y el abandono temprano.</p>
+        </div>
+
+        <div class="benefit-value-card">
+          <h4>Mejorar la empleabilidad</h4>
+          <p>Alinea tu perfil con lo que las empresas del sector tecnológico buscan hoy, comunicando tus capacidades de forma elocuente y verificable.</p>
+        </div>
+
+        <div class="benefit-value-card">
+          <h4>Aplicar en proyectos reales</h4>
+          <p>Supera la etapa puramente teórica implementando soluciones tangibles que demuestren que sabes construir software funcional.</p>
+        </div>
+
+        <div class="benefit-value-card">
+          <h4>Prepararse para cambios tecnológicos</h4>
+          <p>Desarrolla la adaptabilidad mental y técnica necesaria para asimilar nuevos frameworks, librerías y paradigmas impulsados por la IA.</p>
+        </div>
+
+        <div class="benefit-value-card">
+          <h4>Competencias relevantes para el mercado</h4>
+          <p>Enfócate en habilidades con alta tracción y demanda laboral, optimizando cada hora que inviertes en tu autoformación.</p>
+        </div>
+
+        <div class="benefit-value-card">
+          <h4>Construcción de portafolio propio</h4>
+          <p>Reemplaza un currículum estático con proyectos de código abiertos y documentados que respaldan tus fortalezas técnicas.</p>
+        </div>
+      </div>
+
+      <!-- Nota ética y transparente sobre expectativas de empleo -->
+      <div class="honest-disclaimer-box">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p>
+          <strong>Compromiso de Honestidad Académica:</strong> SkillPro AI es una herramienta de orientación y estructuración formativa. <em>No garantiza la obtención automática de empleo ni sustituye la dedicación, el estudio metódico y la práctica rigurosa</em> que requiere la Ingeniería Informática. Su propósito es ser una brújula estratégica para tu talento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       J. PREGUNTAS FRECUENTES (FAQ)
+       ========================================================================= -->
+  <section class="section" id="faq">
+    <div class="container faq-container">
+      <div class="section-header">
+        <span class="section-badge">Transparencia & Dudas</span>
+        <h2 class="section-title">Preguntas <span class="text-gradient">Frecuentes</span></h2>
+        <p class="section-subtitle">
+          Respuestas transparentes sobre las capacidades del proyecto, su enfoque pedagógico y su implementación.
+        </p>
+      </div>
+
+      <div class="accordion" id="faq-accordion">
+        <!-- Generado dinámicamente por JavaScript desde data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       K. PIE DE PÁGINA (FOOTER)
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Columna Marca -->
+        <div class="footer-brand">
+          <h4>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="2.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+            SkillPro AI
+          </h4>
+          <p>
+            Asistente inteligente para la identificación de habilidades, detección de brechas formativas y creación de planes de aprendizaje personalizados.
+          </p>
+          <div class="footer-slogan">
+            “Aprende. Practica. Demuestra tu talento.”
+          </div>
+        </div>
+
+        <!-- Columna Navegación -->
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <div class="footer-links">
+            <a href="#hero" class="footer-link">Inicio</a>
+            <a href="#features" class="footer-link">Funcionalidades</a>
+            <a href="#skills" class="footer-link">Habilidades</a>
+            <a href="#how-it-works" class="footer-link">Cómo funciona</a>
+            <a href="#demo" class="footer-link">Probar herramienta</a>
+          </div>
+        </div>
+
+        <!-- Columna Secciones -->
+        <div class="footer-col">
+          <h5>Recursos</h5>
+          <div class="footer-links">
+            <a href="#example" class="footer-link">Caso Práctico</a>
+            <a href="#benefits" class="footer-link">Beneficios</a>
+            <a href="#faq" class="footer-link">Preguntas Frecuentes</a>
+            <a href="./SKILL.md" class="footer-link" id="skill-doc">Especificación SKILL.md</a>
+            <a href="./README.md" class="footer-link">Documentación Técnica</a>
+          </div>
+        </div>
+
+        <!-- Columna Repositorio & Código -->
+        <div class="footer-col">
+          <h5>Código & Repositorio</h5>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+            Proyecto preparado para exposición universitaria y publicación en GitHub:
+          </p>
+          <div class="footer-links">
+            <a href="https://github.com/usuario/skillpro-ai" target="_blank" rel="noopener noreferrer" class="footer-link" style="display: flex; align-items: center; gap: 0.4rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Repositorio en GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pie Inferior con Atribución Académica -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> SkillPro AI. Todos los derechos reservados.
+        </div>
+        <div class="footer-academic-badge">
+          🎓 Trabajo Académico — Ingeniería Informática
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Principal de la Aplicación -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
